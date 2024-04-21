@@ -2,7 +2,6 @@ package com.example.tm.ui.theme.components
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.icons.Icons
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
@@ -94,7 +93,7 @@ fun TaskText(
     label: String,
     onTextChanged: (String) -> Unit,
     modifier: Modifier = Modifier
-        .padding(16.dp),
+        .padding(16.dp)
 ) {
     TextField(
         value = text,
@@ -105,6 +104,8 @@ fun TaskText(
     )
 
 }
+
+
 
 @Composable
 fun SubTaskText(

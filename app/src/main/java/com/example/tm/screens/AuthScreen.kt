@@ -1,6 +1,5 @@
 package com.example.tm.screens
 
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,13 +18,13 @@ import com.example.tm.ui.theme.components.MyOutlinedTextField
 import com.example.tm.ui.theme.components.PasswordOutlinedTextField
 
 
-
 @Composable
 fun AuthScreen(
     regGoClick: () -> Unit,
     loginClick: () -> Unit
 ) {
     var email by rememberSaveable { mutableStateOf("") }
+    var taskName by rememberSaveable { mutableStateOf("") }
     var password by rememberSaveable { mutableStateOf("") }
     Column (
       modifier = Modifier
@@ -46,5 +45,6 @@ fun AuthScreen(
         ButtonAuth(text = "Go to registration" ) {
             regGoClick()
         }
+
     }
 }
